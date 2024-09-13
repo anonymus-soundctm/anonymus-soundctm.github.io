@@ -17,7 +17,7 @@
 
 
   <meta name="twitter:title" content="Sound Consistency Trajectory Models">
-  <meta name="twitter:description" content="igh-quality one step diffusion model sound generation.">
+  <meta name="twitter:description" content="high-quality one step diffusion model sound generation.">
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
   <meta name="twitter:image" content="static/images/icon.png">
   <meta name="twitter:card" content="icon.png">
@@ -61,81 +61,8 @@
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <span>Koichi Saito</span><span><sup>1</sup></span>,</span>
+                <span>Anonymous Authors</span>
               <span class="author-block">
-              <a href="https://sites.google.com/view/dongjun-kim" target="_blank">Dongjun Kim</a><span><sup>2</sup></span>,</span>
-              <span class="author-block">
-                <span>Takashi Shibuya</span><span><sup>1</sup></span>,</span>
-                <span class="author-block">
-                <a href="https://chiehhsinjesselai.github.io/ChiehHsinLai/" target="_blank">Chieh-Hsin Lai</a><sup>1</sup></span>,</span><br>
-                  <span class="author-block">
-                  <span>Zhi Zhong</span><span><sup>3</sup></span>,</span>
-                      <span class="author-block">
-                        <span>Yuhta Takida</span><span><sup>1</sup></span>,</span>
-                              <span class="author-block">
-                              <a href="https://www.yukimitsufuji.com/" target="_blank">Yuki Mitsufuji</a><span><sup>1,3</sup></span>,</span>
-                  </span>
-                  </div>
-
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block"><sup>1</sup>Sony AI, <sup>2</sup>Stanford University, <sup>3</sup>Sony Group Corporation
-<!--                     <span class="eql-cntrb"><small><br><center><img src="static/images/cifar_badge.svg" alt="MY ALT TEXT" width="100%"/></center></small></span> -->
-                  </div>
-                  
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/2405.18503.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper PDF</span>
-                      </a>
-                    </span>
-
-                    <!-- Supplementary PDF link 
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary </span>
-                    </a>
-                  </span>-->
-
-                  <!-- ArXiv abstract Link -->
-                  <span class="link-block">
-                    <a href="https://arxiv.org/abs/2405.18503" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                    </span>
-                    <span>arXiv</span>
-                  </a>
-                </span>
-
-                <!-- Github link -->
-                <span class="link-block">
-                  <a href="https://github.com/sony/soundctm" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://huggingface.co/Sony/soundctm" target="_blank"
-                class="external-link button is-normal is-rounded is-dark">
-                <!-- <span class="icon">
-                  <i class="fab fa-hugging-face"></i>
-                </span> -->
-                <span>Hugging Face</span>
-              </a>
-            </span>
             </div>
           </div>
         </div>
@@ -153,7 +80,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Sound content is an indispensable element for multimedia works such as video games, music, and films. Recent high-quality diffusion-based sound generation models can serve as valuable tools for the creators. However, despite producing high-quality sounds, these models often suffer from slow inference speeds. This drawback burdens creators, who typically refine their sounds through trial and error to align them with their artistic intentions. To address this issue, we introduce <b>Sound</b> <b>C</b>onsistency <b>T</b>rajectory <b>M</b>odels (<b>SoundCTM</b>). Our model enables flexible transitioning between high-quality 1-step sound generation and superior sound quality through multi-step generation. This allows creators to initially control sounds with 1-step samples before refining them through multi-step generation. While CTM fundamentally achieves flexible 1-step and multi-step generation, its impressive performance heavily depends on an additional pretrained feature extractor and an adversarial loss, which are expensive to train and not always available in other domains. Thus, we reframe CTM's training framework and introduce a novel feature distance by utilizing the teacher's network for a distillation loss. Additionally, while distilling classifier-free guided trajectories, we train conditional and unconditional student models simultaneously and interpolate between these models during inference. We also propose training-free controllable frameworks for SoundCTM, leveraging its flexible sampling capability. SoundCTM achieves both promising 1-step and multi-step real-time sound generation without using any extra off-the-shelf networks. Furthermore, we demonstrate SoundCTM's capability of controllable sound generation in a training-free manner.
+            Recent high-quality diffusion-based sound generation models can serve as valuable tools for sound content creators. However, despite producing high-quality sounds, these models often suffer from slow inference speeds. This drawback burdens creators, who typically refine their sounds through trial and error to align sounds with their artistic intentions. To address this issue, we introduce <b>Sound</b> <b>C</b>onsistency <b>T</b>rajectory <b>M</b>odels (<b>SoundCTM</b>). Our model enables flexible transitioning between high-quality 1-step sound generation and superior sound quality through multi-step generation. This allows creators to initially control sounds with 1-step samples before refining them through multi-step generation. We reframe original CTM's training framework and introduce a novel feature distance by utilizing the teacher's network for a distillation loss. Additionally, while distilling classifier-free guided trajectories, we train conditional and unconditional student models simultaneously and interpolate between these models during inference. SoundCTM achieves both promising 1-step and multi-step real-time sound generation without using any extra off-the-shelf networks.
           </p>
         </div>
       </div>
@@ -364,30 +291,6 @@
   </div>
 </section>
 
-
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>@article{saito2024soundctm,
-        title={SoundCTM: Uniting Score-based and Consistency Models for Text-to-Sound Generation}, 
-        author={Koichi Saito and Dongjun Kim and Takashi Shibuya and Chieh-Hsin Lai and Zhi Zhong and Yuhta Takida and Yuki Mitsufuji},
-        journal={arXiv preprint arXiv:2405.18503},
-        year={2024}
-      }</code></pre>
-    </div>
-</section>
-
-<!--End BibTex citation -->
-
-
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
 
   </body>
   </html>
